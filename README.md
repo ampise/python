@@ -1,2 +1,2 @@
-# python
-My python experiments
+# Python
+My Python experiments.
