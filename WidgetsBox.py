@@ -1,3 +1,4 @@
+# Calculate how many widgets in a box
 boxHeight = float(input("What is the height of the box?: "))
 boxWidth = float(input("What is the width of the box?: "))
 boxLength = float(input("What is the length of the box?: "))
