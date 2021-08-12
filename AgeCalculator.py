@@ -1,4 +1,4 @@
-yearUser = input("Enter your year of birth: ")
+yearUser = int(input("Enter your year of birth: "))
 
 if yearUser >= 1900 and yearUser <= 2021:
     age = 2021 - yearUser
