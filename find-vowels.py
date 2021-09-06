@@ -12,8 +12,11 @@ os.system("clear")
 count = 0
 text = input("Please enter a string of text: ")
 # Find vowels in text
+foundVowels = []
 for vowel in text:
     if vowel in ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u"]:
         # Increase count by one each time found one
         count += 1
-print("There are", count, "vowels in the string.")
+        foundVowels.append(vowel)
+print("There are", count, "vowels in the string. They are:")
+print(", ".join(foundVowels))
