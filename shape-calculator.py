@@ -2,7 +2,7 @@ import os
 import math
 os.system("clear")
 
-# Calculate area of a Square
+# Calculate area of shapes.
 
 
 def squareArea():

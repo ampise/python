@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------------------------
-# Print odd and even numbers between 0 and a range provided by the user
+# Print odd and even numbers between 0 and a range provided by the user.
 # -----------------------------------------------------------------------------------------------
 
 number = input("Enter a number: ")

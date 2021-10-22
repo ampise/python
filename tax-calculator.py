@@ -1,6 +1,4 @@
-# Program to calculate Final bill amount
-# based on patron's state.
-#
+# Program to calculate final bill amount based on patron's state.
 
 states = ["AL", "AK", "AZ", "AR"]
 salesTaxRates = [0.04, 0.00, 0.05, 0.06]
