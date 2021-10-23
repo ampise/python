@@ -19,7 +19,7 @@ print("Items: ", len(list))
 
 # Median
 print("Median: ", len(list) / 2)
-# Need to fix median accuracy, especially for even lists
+# Need to fix median accuracy, for even and odd lists
 
 # First Divisible by 5
 for d in list:
