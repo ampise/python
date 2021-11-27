@@ -2,7 +2,7 @@ from __future__ import print_function
 import os, math
 os.system("clear")
 
-word = "Sunita"
+word = "MANGESH"
 wordMidpoint = int(len(word)/2)
 
 last = len(word)
