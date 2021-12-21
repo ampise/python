@@ -1,6 +1,6 @@
 # This program helps education people about water insecurity by asking them questions to see what they already know.
 
-#This is where the question 1 begins
+# Question 1
 
 print("Q: People need 3 liters of drinking water every day to survive.\n")
 answer1 = input("Enter T for True or F for False: ")
@@ -10,7 +10,7 @@ else:
   print("This is true. People need 3 liters of drinking water every day.\n")
 
 
-#This is where the question 2 begins
+# Question 2
 
 print("Q: 10% of the global population lack access to safe drinking water.\n")
 answer2 = input("Enter T for True or F for False: ")
@@ -20,7 +20,7 @@ else:
   print("Sorry, the correct answer was False. It is 33%, not 10%.\n")
 
 
-#This is where the question 3 begins
+# Question 3
 
 print("Q: 72,000 children under the age of five die every year due to contaminated drinking water and poor sanitation.\n")
 answer3 = input("Enter T for True or F for False: ")
