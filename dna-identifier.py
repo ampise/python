@@ -1,3 +1,6 @@
+import os
+os.system("clear")
+
 # Already identified sequences of irregular DNA’s found in bacteria and viruses of common diseases are as follows:
 
 # Malaria - GBC
@@ -18,21 +21,35 @@
 # Malaria = 2
 # Typhoid = 1
 
-malaria = str("GBC")
-typhoid = str("GCD")
-hiv = str("GAA")
-sars = str("CAC")
+malaria = ["G", "B", "C"]
+typhoid = ["B", "G", "D"]
+hiv = ["C", "F", "B"]
+sars = ["F", "G", "G"]
+dna = []
+foundMalaria = 0
+foundTyphoid = 0
+foundHIV = 0
+foundSARS = 0
 
-dna = input("Please enter the patient's DNA Sequence: ").upper()
-
-if malaria:
-    
-
-
-
-
-
-
+dnaString = input("Please enter patient's DNA sequence: ").upper()
+for i in range(len(dnaString)):
+    dna.append(dnaString[i])
 
 
+# Find positives in DNA matches
+def findMatches(diseaseDNA, patientDNA):
+    diseaseMatches = 0
+    for searchPosition in range(len(patientDNA) - len(diseaseDNA) + 1):
+        positives = 0
+        for d in range(len(diseaseDNA)):
+            if diseaseDNA[d] == patientDNA[searchPosition + d]:
+                positives = positives + 1
+        if positives == len(diseaseDNA):
+            diseaseMatches = diseaseMatches + 1
+    return diseaseMatches
 
+
+print("Malaria (", "-".join(malaria), ") =", findMatches(malaria, dna))
+print("Typhoid (", "-".join(typhoid), ") =", findMatches(typhoid, dna))
+print("HIV (", "-".join(hiv), ") =" , findMatches(hiv, dna))
+print("SARS (", "-".join(sars), ") =" , findMatches(sars, dna))
