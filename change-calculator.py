@@ -12,19 +12,28 @@ def calculateChange(bill):
     return change / 100
 
 # changeDenomination
-def changeDenomination(###):
+def changeDenomination(change):
+    change = change * 100
     coins = [25, 10, 5, 1]
-    while change > 0:
-        for i in coins:
-            if (change - i) >= 0:
-                change = change - i
-            do until change <= 0:
-                
+    coinCounter = [0, 0, 0, 0]
+    for i, coin in enumerate(coins):
+        while change >= coin:
+            change = change - coin
+            coinCounter[i] = coinCounter[i] + 1
+    # printing results
+    verifiedAmount = 0
+    for i, count in enumerate(coinCounter):
+        verifiedAmount = verifiedAmount + (count * coins[i])
+        print(count, " x ", coins[i] , " cent coins = ", count * coins[i])
+    print("Change returned = ", verifiedAmount / 100)
 
-# billAmount = generateBill()
-# print(billAmount)
 
-# changeAmount = calculateChange(billAmount)
-# print(changeAmount)
+billAmount = generateBill()
+print("Bill amount = ", billAmount)
+
+changeAmount = calculateChange(billAmount)
+print("Change from 50.00 = ", changeAmount)
+
+changeDenomination(changeAmount)
 
 # print("test ", billAmount + changeAmount)
