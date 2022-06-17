@@ -6,20 +6,22 @@ os.system("clear")
 # Computer tells if hot, cold, less, or more based on guess
 # Hot Range: +/- 3 numbers | Cold Range:
 
-# primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
-def getNextPrimeDivisor(n):
-    for i in range(2, n):
-        if isPrime(i):
-            if n % i == 0:
-                return i
-    return n
+primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+# def getNextPrimeDivisor(n):
+#     for i in range(2, n):
+#         if isPrime(i):
+#             if n % i == 0:
+#                 return i
+#     return n
 
 # Generate random number R
-LOWER = 1
-UPPER = 100
-CHANCES = 5
-R = random.choice(getNextPrimeDivisor())
-print(" >> R = ", R)
+def generateRandomNumber(): 
+    LOWER = 1
+    UPPER = 100
+    CHANCES = 5
+    R = random.choice(primeNumbers)
+    print(" >> R = ", R)
+    hotMore = primeNumbers[R] +
 
 # Find how far from lower and upper limits
 # lowerRangeHalf = round((R - LOWER) / 2, 0)
@@ -31,20 +33,10 @@ print(" >> R = ", R)
 # Loop amount of chances
 matched = False
 chances = 1
-guess = []
+
 while not matched and chances <= CHANCES:
     guess = int(input("Enter a prime number between 1 and 100: "))
-    # Hot or cold response
-    # if guess <= R + 3:
-        # print("You guessed a little more than the number. So close, but you're hot!")
-    # if guess >= R - 3:
-       # print("You guessed a little less than the number. So close, but you're hot!")
-    # if guess > R + 3:
-        # print("Oops! You guessed more than the number. Good try, but you're cold.")
-    # if guess > R - 3:
-       # print("Oops! You guessed less than the number. Good try, but you're cold.")
-    # chances = chances + 1
-# matched = True
+    chances = chances + 1
     
 
 
@@ -61,3 +53,6 @@ def isPrime(n):
 # Reveal result
 if chances >= CHANCES:
     print("Sorry, you guessed incorrectly. The number was", R)
+
+# --- main execution ---
+...
