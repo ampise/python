@@ -16,5 +16,3 @@ def getInput(eDay):
 
 def calcEqualDay(getInput):
     return 12 - aLand
-
-for 
