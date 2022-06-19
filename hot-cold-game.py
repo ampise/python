@@ -21,7 +21,7 @@ def generateRandomNumber():
     CHANCES = 5
     R = random.choice(primeNumbers)
     print(" >> R = ", R)
-    hotMore = primeNumbers[R] +
+    hotMore = primeNumbers[R] + 3
 
 # Find how far from lower and upper limits
 # lowerRangeHalf = round((R - LOWER) / 2, 0)
