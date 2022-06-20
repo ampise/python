@@ -52,13 +52,16 @@ def getHighHotWarm(primes, n):
         high_warm = primes[max_range]
     return high_warm, high_hot
 
+# -- main --
 if len(sys.argv) >= 2:
     primeNumbers = generatePrimeNumbers(int(sys.argv[1]))
-    COMPUTER_PRIME_NUMBER = primeNumbers[random.randint(1, len(primeNumbers)) - 1]
+    r = random.randint(0, len(primeNumbers)-1)
+    COMPUTER_PRIME_NUMBER = primeNumbers[r]
     LOW_WARM, LOW_HOT = getLowHotWarm(primeNumbers, COMPUTER_PRIME_NUMBER)
     HIGH_WARM, HIGH_HOT = getHighHotWarm(primeNumbers, COMPUTER_PRIME_NUMBER)
 
     gameComplete = False
+    print(r)
     print(primeNumbers)
     print(COMPUTER_PRIME_NUMBER)
     print(LOW_WARM, LOW_HOT)
