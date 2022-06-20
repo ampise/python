@@ -76,7 +76,7 @@ if len(sys.argv) >= 2:
             # Check lows
             if userGuess >= LOW_HOT and userGuess < COMPUTER_PRIME_NUMBER:
                 message = "You guessed low, but are very close. Definitely Hot!"
-            elif userGuess >= LOW_WARM and userGuess < LOW_HOT  and userGuess < COMPUTER_PRIME_NUMBER:
+            elif userGuess >= LOW_WARM and userGuess < LOW_HOT:
                 message = "You guessed low, but could do better. I feel Warm!"
             elif userGuess < LOW_WARM:
                 message = "Wow! too far..."
@@ -84,7 +84,7 @@ if len(sys.argv) >= 2:
             # Check highs
             if userGuess <= HIGH_HOT and userGuess > COMPUTER_PRIME_NUMBER:
                 message = "You guessed high, but are very close. Definitely Hot!"
-            elif userGuess <= HIGH_WARM and userGuess > HIGH_HOT  and userGuess > COMPUTER_PRIME_NUMBER:
+            elif userGuess <= HIGH_WARM and userGuess > HIGH_HOT:
                 message = "You guessed high, but could do better. I feel Warm!"
             elif userGuess > HIGH_WARM:
                 message = "Wow! not even close..."
