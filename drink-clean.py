@@ -56,7 +56,7 @@ print(needs - provided)
 
 # Prompt user to enter how many liters can be cleaned
 
-clean = input("\nHow many liters can one DrinkClean device purify?")
+clean = input("\nHow many liters can one DrinkClean device purify?: ")
 clean = int(clean)
 
 # Calculate how many DrinkClean devices
