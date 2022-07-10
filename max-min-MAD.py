@@ -1,32 +1,48 @@
-import os, sys
+import os, sys, math
 os.system("clear")
 
-def getMin(max):
+def getMin(max, a):
     min = max
-    for i in range(1, len(sys.argv)):
-        if int(sys.argv) < min:
-            min = int(sys.argv[i])
+    for i in a:
+        if i < min:
+            min = i
     return min
 
-def getMax():
+def getMax(a):
     max = 0
-    for i in range(1, len(sys.argv)):
-        if int(sys.argv) > max:
-            max = int(sys.argv[i])
+    for i in a:
+       if i > max:
+           max = i
     return max
 
-def getDeviation():
-
-
-list = []
+def getDeviation(a):
+    # Calculate mean
+    sum = 0
+    mean = 0
+    for i in a:
+        sum = sum + i
+    mean = sum / len(a)
+    # Calculate deviation
+    sum = 0
+    for i in a:
+        sum = sum + ((mean - i) ** 2)
+    sd = math.sqrt(sum / len(a))
+    return sd
 
 
 # MAIN PROGRAM
 
 if len(sys.argv) >= 2:
-    print("Minimum of set: ", getMin(sys.argv))
-    print("Maximum of set: ", getMax(sys.argv))
-    print("Standard Deviation of set: ", getDeviation(sys.argv))
+    list = []
+    for i in range(1, len(sys.argv)):
+        list.append(int(sys.argv[i]))
+
+    mx = getMax(list)
+    mn = getMin(mx, list)
+    sd = getDeviation(list)
+    print("Minimum of set: ", mn)
+    print("Maximum of set: ", mx)
+    print("Standard Deviation of set: ", sd)
 
 else:
     print("Incorrect usage. Correct usage: python3", sys.argv[0], "NN")
