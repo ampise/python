@@ -21,8 +21,8 @@ def getVehicle(car):
         "2": van,
         "3": sedan,
     }
-    func = vehicleType.get(car)
-    func()
+    transportation = vehicleType.get(car)
+    transportation()
     print("\n")
 
 # Main entry
