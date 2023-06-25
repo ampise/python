@@ -1,6 +1,5 @@
 const m1 = [[0, 2], [-2, -5]]
 const m2 = [[6, -6], [3, 0]]
-// -- Define shape of resulting matrix
 let m3 = [];
 
 if (m1[0].length == m2.length) {
