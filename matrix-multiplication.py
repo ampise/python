@@ -1,25 +1,21 @@
-import os
-os.system("clear")
-
-m1 = [[1, 2, 3], [4, 5, 6]]
-m2 = [[7, 8], [9, 10], [11, 12]]
-# m3 = [[58, 64], [139, 154]]
-
-# Define result matrix
+m1 = [[0, 2], [-2, -5]]
+m2 = [[6, -6], [3, 0]]
 m3 = []
-for i in range(len(m1)):
-    m = []
-    for j in range(len(m2[0])):
-        m.append(0)
-    m3.append(m)
 
-# Perform matrix multiplication
-    for rM1 in range(len(m1)):
-        for cM1 in range(len(m1[0])):
-            m1_element = m1[rM1][rM1]
-            mm_element = 0
-            for cM2 in range(len(m2[0])):
-                m2_element = m2[cM1][rM1]
-                mm_element += m1_element * m2_element
-            print(m1_element, m2_element,
-                  m1_element * m2_element, mm_element)
+if len(m1[0]) == len(m2):
+    m1Row = 0
+    while m1Row < len(m1):
+        m3.append([])
+        m2Column = 0
+        while m2Column < len(m2[m1Row]):
+            mm = 0
+            for i in range(len(m1[m1Row])):
+                m1Element = m1[m1Row][i]
+                m2Element = m2[i][m2Column]
+                mm += m1Element * m2Element
+            m3[m1Row].append(mm)
+            m2Column += 1
+        m1Row += 1
+    print(m3)
+else:
+    print("Sorry! The dimensions of the matrices don't match.")
