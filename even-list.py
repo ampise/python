@@ -3,9 +3,15 @@ os.system("clear")
 
 # list = eval(input("Please give a list of numbers: "))
 list = input("Please give a list of numbers: ").split()
+evens = []
+odds = []
 
-for i in list:
-    if int(i) % 2 == 0:
-        print("Even(s):", i)
+for e in list:
+    if int(e) % 2 == 0:
+        evens.append(e)
+print("Even(s):", evens)
 
-# not done yet, make for loop for odds, append into respective array
+for o in list:
+    if int(o) % 2 != 0:
+        odds.append(o)
+print("Odd(s):", odds)
